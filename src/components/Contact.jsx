@@ -4,38 +4,26 @@ export default function Contact() {
     const [result, setResult] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const onSubmit = async (event) => {
+    const onSubmit = (event) => {
         event.preventDefault();
-        setIsSubmitting(true);
-        setResult("Sending....");
         
         const formData = new FormData(event.target);
-
-        try {
-            const res = await fetch("https://formsubmit.co/ajax/elmirhasnae55@gmail.com", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: formData.get("name"),
-                    email: formData.get("email"),
-                    message: formData.get("message"),
-                    _subject: "New Form Submission - Portfolio"
-                })
-            }).then(res => res.json());
-
-            if (res.success === "true" || res.success === true) {
-                setResult("Form submitted successfully! (Please check your email to activate FormSubmit on the first try)");
-                event.target.reset();
-            } else {
-                setResult(res.message || "An error occurred.");
-            }
-        } catch (error) {
-            setResult("Failed to send message.");
-        }
-        setIsSubmitting(false);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+        
+        // Construct the mailto URL
+        const subject = encodeURIComponent(`New message from ${name} - Portfolio`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        
+        // Open the user's default email client
+        window.location.href = `mailto:elmirhasnae55@gmail.com?subject=${subject}&body=${body}`;
+        
+        setResult("Opening your email client...");
+        setTimeout(() => {
+            setResult("");
+            event.target.reset();
+        }, 3000);
     };
 
     return (

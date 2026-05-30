@@ -17,8 +17,8 @@ export default function Footer() {
             <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3">
                 <p>© {new Date().getFullYear()} Hasnae EL MIR. All rights reserved.</p>
                 <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                    <li><a target='_blank' href="#">GitHub</a></li>
-                    <li><a target='_blank' href="#">LinkedIn</a></li>
+                    <li><a target='_blank' href="https://github.com/Hannahdev">GitHub</a></li>
+                    <li><a target='_blank' href="https://www.linkedin.com/in/hasnae-el-mir-01b7ab1b9">LinkedIn</a></li>
                     <li><a target='_blank' href="#">Twitter</a></li>
                 </ul>
             </div>
