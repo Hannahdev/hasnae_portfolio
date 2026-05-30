@@ -82,7 +82,7 @@ export default function Header() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
 
-                <a href="./assets/dev-icon.png" download
+                <a href="./assets/cv.pdf" download="Hasnae_El_Mir_CV.pdf"
                     className="px-8 py-2.5 rounded-full border border-gray-300 dark:border-white/20 hover:bg-white dark:hover:bg-darkHover flex items-center gap-2 bg-white/70 dark:bg-white/[0.04] backdrop-blur-sm text-gray-800 dark:text-white font-Outfit text-sm font-medium hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
                     Download CV
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
