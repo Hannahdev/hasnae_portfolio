@@ -1,6 +1,5 @@
 import HighlightsJourney from './components/HighlightsJourney'
 import Leadership from './components/Leadership'
-import Education from './components/Education'
 import Footer from './components/Footer'
 import Work from './components/Work'
 import Services from './components/Services'
@@ -18,7 +17,6 @@ export default function App() {
             <Navbar />
             <Header />
             <About />
-            <Education />
             <Services />
 
             <TechStack />
